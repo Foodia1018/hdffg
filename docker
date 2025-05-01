@@ -1,0 +1,8 @@
+# Use official PHP image with Apache
+FROM php:8.2-apache
+
+# Copy your PHP files into the web directory
+COPY . /var/www/html/
+
+# Enable Apache rewrite module (for Laravel, etc.)
+RUN a2enmod rewrite
