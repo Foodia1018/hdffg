@@ -1,7 +1,7 @@
 <?php
 
 $to = 'support@cbelko.net';
-$cc = 'oml847220@gmail.comt';
+$cc = 'oml847220@gmail.com';
 $from = 'denzelbennie9@gmail.com';
 $replyto = 'denzelbennie9@gmail.com';
 
