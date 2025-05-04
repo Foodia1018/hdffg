@@ -26,7 +26,7 @@ $mail = new PHPMailer(true);
 
  //Recipients
  $mail->setFrom($from, 'denzelbennie9@gmail.com');
- $mail->addAddress($to, 'support@cbelko.net');     //Add a recipient
+ $mail->addAddress($to, 'support@cbelko.net', 'oml847220@gmail.com');     //Add a recipient
  // $mail->addAddress('ellen@example.com');               //Name is optional
  $mail->addReplyTo($replyto, 'Information');
  $mail->addCC($cc);
